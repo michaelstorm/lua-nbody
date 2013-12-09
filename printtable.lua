@@ -1,3 +1,5 @@
+-- Adapted from Borodin's SO answer at http://stackoverflow.com/a/9168158
+
 printf = function(s,...) return io.write(s:format(...)) end
 
 function ptable(t, name)
