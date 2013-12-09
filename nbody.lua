@@ -81,7 +81,7 @@ function clone_body(body)
     return {name = body.name, mass = body.mass, rest_mass = body.rest_mass, pos = shallowcopy(body.pos), vector = shallowcopy(body.vector), time = body.time}
 end
 
-f = io.open("bodies.json", "r")
+f = io.open(arg[1], "r")
 content = f:read("*all")
 f:close()
 
@@ -93,8 +93,8 @@ for i, body in ipairs(bodies) do
     body.rest_mass = body.mass
 end
 
-time_step = arg[1]
-time_end = arg[2]
+time_step = arg[2]
+time_end = arg[3]
 for time = 0, time_end, time_step do
     --print("Time =", time)
 
